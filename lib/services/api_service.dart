@@ -20,6 +20,7 @@ class ApiService {
   Future<List<Post>> fetchPosts() async {
     try {
       final response = await _dio.get('/posts?_limit=20');
+      //final response = await _dio.get('/posts?_limit=20&_sort=id&_order=desc');
 
       if (response.statusCode == 200) {
         final List<dynamic> data = response.data;

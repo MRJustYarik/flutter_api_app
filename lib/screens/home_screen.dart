@@ -106,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
         }
 
         // Проверка на пустые данные
-        final posts = snapshot.data!;
+        final posts = snapshot.data!.reversed.toList();
         if (posts.isEmpty) {
           return const Center(
             child: Column(
